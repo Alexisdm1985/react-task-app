@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #050505;
+}
+h1,
+p {
+    text-transform: capitalize;
+}
+
+main {
+    margin-top: 5rem;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.task-list{
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 380px));
+    place-content: center;
+    padding: 1rem 0;
+
+}
+.task-card {
+    background-color: #121212;
+    border-radius: 28px;
+    border: 1px solid #555;
+    box-shadow: rgba(0, 0, 0, .3) 5px 5px 5px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 30px;
+    transition: all .4s ease-in-out;
+}
+.task-card:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    border-color: #4c49ea;
+    /* box-shadow: 1px 2px 15px rgba(0,0,0,.32); */
+    /* box-shadow: 1px 2px 15px #952aff; */
+    box-shadow: 1px 2px 15px rgba(149, 42, 255, .5);
+}
+.task-card h1 {
+    overflow: hidden;
+    margin: 0;
+    transition: all .4s ease-in-out;
+}
+.task-card:hover h1 {
+    color: #27AE60;
+}
+.task-card p {
+    overflow: hidden;
+    
+}
+button{
+/* .task-card button{ */
+    background-color: #e44002;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: .8rem;
+    width: 65%;
+    align-self: center;
+}
+button:hover{
+    animation: pulse 1s;
+    box-shadow: 0 0 0 .6em transparent;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0; }
+  }
+
+form {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.input-section {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 2rem;
+}
+
+form textarea {
+    height: 150px;
+    width: 45%;
+    resize: none;
+}
+
+form button {
+    /* background-color: #cd3e94; */
+    background-color: #f9b234;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    border-radius: 27px;
+    border: none;
+    background-color: #121212;
+    padding: 1rem;
+    text-align: center;
+    appearance: none;
+    transition: border 0.15s ease;
+    border: 1px solid rgb(31, 32, 35);
+    color: white;
+
+}
+textarea:focus {
+    outline: none;
+    border: 1px solid #4c49ea;
+}
+form input:focus {
+    outline: none;
+    border: 1px solid #952aff;
+};
+
+
